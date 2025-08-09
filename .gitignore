@@ -45,3 +45,4 @@ next-env.d.ts
 # backups
 node_modules_backup
 package-lock.backup.json
+public_backup_*
