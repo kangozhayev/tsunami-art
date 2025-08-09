@@ -1,0 +1,31 @@
+.button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 13px;
+  font-weight: 600;
+  color: white;
+  height: 40px;
+  width: 100%;
+  border: none;
+  border-radius: 999px;
+  background-color: #ff9494;
+  cursor: pointer;
+  transition:
+    background-color 0.3s ease,
+    transform 0.2s ease,
+    box-shadow 0.3s ease;
+
+  box-shadow: 0 4px 8px rgba(255, 148, 148, 0.3);
+
+  &:hover {
+    background-color: #ffb3b3;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 14px rgba(255, 148, 148, 0.4);
+  }
+
+  &:active {
+    transform: scale(0.96);
+    box-shadow: 0 3px 6px rgba(255, 148, 148, 0.25);
+  }
+}

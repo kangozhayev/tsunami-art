@@ -1,0 +1,232 @@
+$pink: #ff9494;
+$pink-soft: #ffb3b3;
+$error: #ff6b6b;
+
+.formWrapper {
+  min-height: 100vh;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  padding: 48px 32px;
+  box-sizing: border-box;
+}
+
+.form {
+  width: 100%;
+  max-width: 520px;
+  margin-left: auto;
+  margin-right: 100px;
+  color: #fff;
+  font-family: 'Josefin Sans', sans-serif;
+  background: transparent;
+  display: grid;
+  gap: 18px;
+  animation: fadeUp 0.35s ease both;
+}
+
+@keyframes fadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.form h2 {
+  margin: 0 0 6px;
+  font-size: clamp(22px, 3vw, 28px);
+  font-weight: 800;
+  letter-spacing: 0.2px;
+}
+
+.row {
+  display: flex;
+  gap: 16px;
+  width: 100%;
+}
+.row input {
+  flex: 1 1 0;
+  min-width: 0;
+  box-sizing: border-box;
+}
+
+.column {
+  display: grid;
+  gap: 14px;
+}
+
+.form input,
+.form textarea {
+  width: 100%;
+  background: transparent;
+  border: none;
+  outline: none;
+  color: #fff;
+  font-size: 16px;
+  padding: 10px 0;
+  box-sizing: border-box;
+
+  background-image: linear-gradient(#fff, #fff), linear-gradient($pink, $pink);
+  background-repeat: no-repeat;
+  background-position:
+    left calc(100% - 1px),
+    left bottom;
+  background-size:
+    100% 1px,
+    0 2px;
+  transition:
+    background-size 0.22s ease,
+    color 0.2s ease,
+    opacity 0.2s ease;
+
+  &::placeholder {
+    color: #fff;
+    opacity: 1;
+  }
+
+  &:hover {
+    opacity: 1;
+  }
+
+  &:focus {
+    background-size:
+      100% 1px,
+      100% 2px;
+  }
+}
+
+.form textarea {
+  min-height: 140px;
+  resize: vertical;
+}
+
+.form input[aria-invalid='true'],
+.form textarea[aria-invalid='true'] {
+  background-image:
+    linear-gradient(#fff, #fff), linear-gradient($error, $error);
+  background-size:
+    100% 1px,
+    100% 2px;
+}
+
+.errorMessage {
+  color: #fff;
+  background: linear-gradient(90deg, #ff9494, #ffb3b3);
+  padding: 6px 10px;
+  border-radius: 6px;
+  font-size: 14px;
+  margin: 0;
+  width: 100%;
+  box-sizing: border-box;
+  text-align: left;
+  font-weight: 500;
+
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.buttonContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  margin-top: 6px;
+}
+
+.button {
+  max-width: 140px;
+  letter-spacing: 0.12em;
+
+  &:hover {
+    transform: translateY(-1px);
+  }
+}
+.button:disabled {
+  cursor: not-allowed;
+  opacity: 0.8;
+}
+
+.modalMessage {
+  position: fixed;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  background: linear-gradient(90deg, $pink, $pink-soft);
+  color: #fff;
+  padding: 12px 18px;
+  border-radius: 12px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.25);
+  font-weight: 700;
+  z-index: 9999;
+  text-align: center;
+  display: inline-flex;
+  flex-direction: column;
+  gap: 4px;
+  animation: fadeInOut 3s ease-in-out;
+  max-width: 90%;
+  white-space: normal;
+  word-break: break-word;
+}
+
+@media (max-width: 480px) {
+  .modalMessage {
+    font-size: 14px;
+    padding: 10px 14px;
+    max-width: 80%;
+  }
+}
+
+@keyframes fadeInOut {
+  0% {
+    opacity: 0;
+    transform: translate(-50%, -10px);
+  }
+  10%,
+  80% {
+    opacity: 1;
+    transform: translate(-50%, 0);
+  }
+  100% {
+    opacity: 0;
+    transform: translate(-50%, -10px);
+  }
+}
+
+.form :global(input:-webkit-autofill),
+.form :global(textarea:-webkit-autofill),
+.form :global(input:-webkit-autofill:hover),
+.form :global(textarea:-webkit-autofill:hover),
+.form :global(input:-webkit-autofill:focus),
+.form :global(textarea:-webkit-autofill:focus) {
+  -webkit-text-fill-color: #fff;
+  caret-color: #fff;
+  box-shadow: 0 0 0 1000px transparent inset;
+  -webkit-box-shadow: 0 0 0 1000px transparent inset;
+  transition: background-color 9999s ease-in-out 0s;
+}
+
+@media (max-width: 1024px) {
+  .form {
+    margin-right: 40px;
+  }
+}
+
+@media (max-width: 768px) {
+  .formWrapper {
+    justify-content: center;
+    padding: 32px 16px;
+  }
+  .form {
+    margin: 0 auto;
+    max-width: 100%;
+    padding: 0 4px;
+  }
+  .row {
+    flex-direction: column;
+    gap: 12px;
+  }
+}

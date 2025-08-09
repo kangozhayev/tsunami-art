@@ -1,0 +1,157 @@
+.container {
+  background-color: transparent;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 20px;
+  position: relative;
+  z-index: 10;
+
+  @media (max-width: 768px) {
+    flex-direction: row;
+    align-items: center;
+  }
+}
+
+.mainLogo {
+  text-decoration: none;
+  color: #ff9494;
+  cursor: pointer;
+
+  &:hover {
+    color: #ffa3a3;
+  }
+}
+
+.hamburger {
+  background: transparent;
+  border: 0;
+  padding: 0;
+  margin: 0;
+  line-height: 0;
+  -webkit-tap-highlight-color: transparent;
+  appearance: none;
+
+  width: 44px;
+  height: 44px;
+
+  display: none;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 5px;
+  cursor: pointer;
+  z-index: 21;
+
+  &:focus-visible {
+    outline: none;
+  }
+
+  .bar {
+    width: 25px;
+    height: 3px;
+    background-color: #ffd1d1;
+    transition: 0.3s;
+  }
+
+  @media (max-width: 768px) {
+    display: flex;
+  }
+
+  .bar1 {
+    transform: rotate(45deg) translate(5px, 5px);
+  }
+
+  .bar2 {
+    opacity: 0;
+  }
+
+  .bar3 {
+    transform: rotate(-45deg) translate(5px, -5px);
+  }
+}
+
+.right {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+
+  ul {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+    padding: 0;
+
+    li a {
+      text-decoration: none;
+      color: #ffd1d1;
+
+      &:hover {
+        color: #ff9494;
+      }
+    }
+  }
+
+  @media (max-width: 768px) {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    position: fixed;
+    inset: 0;
+    background-color: rgba(0, 0, 0, 0.7);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+
+    opacity: 0;
+    pointer-events: none;
+
+    z-index: 15;
+
+    ul {
+      flex-direction: column;
+      gap: 24px;
+
+      li a {
+        font-size: 24px;
+        font-weight: bold;
+        color: #ff9494;
+        transition:
+          transform 0.3s ease,
+          color 0.3s ease;
+
+        &:hover {
+          color: #ffd1d1;
+          transform: scale(1.08);
+        }
+      }
+    }
+  }
+}
+
+.openMenu {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.active {
+  color: #e57373 !important;
+}
+
+@media (max-width: 768px) {
+  .active {
+    color: #e57373 !important;
+    position: relative;
+
+    &::after {
+      content: '';
+      position: absolute;
+      bottom: -6px;
+      left: 0;
+      width: 100%;
+      height: 2px;
+      background-color: #e57373;
+    }
+  }
+}
