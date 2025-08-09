@@ -23,7 +23,7 @@ const CoursesPage = () => {
     <div className={styles.page}>
       <section className={styles.hero}>
         <Image
-          src="/1.PNG"
+          src="/1.webp"
           alt="Courses hero"
           fill
           priority

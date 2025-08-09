@@ -1,15 +1,15 @@
 const backgroundImages: {
   [key: string]: string;
 } = {
-  '/': '/23.PNG',
+  '/': '/23.webp',
   '/gallery': '',
   '/courses': '',
-  '/about': '/27.PNG',
-  '/collaboration': '/5.PNG',
-  '/contact': '/9.jpg',
-  '/login': '/6.JPEG',
-  '/register': '/6.JPEG',
-  '/profile': '/11.jpg'
+  '/about': '/27.webp',
+  '/collaboration': '/5.webp',
+  '/contact': '/2.webp',
+  '/login': '/11.JPEG',
+  '/register': '/11.JPEG',
+  '/profile': '/19.webp',
 };
 
 export default backgroundImages;
