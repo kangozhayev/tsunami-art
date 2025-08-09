@@ -7,9 +7,9 @@ import ShinyText from '@/common/ShinyText/ShinyText';
 import clsx from 'clsx';
 import { usePathname } from 'next/navigation';
 
-const TopBar: React.FC = (): JSX.Element => {
+const TopBar: React.FC = () => {
   const [menuOpen, setMenuOpen] = useState<boolean>(false);
-  const pathname = usePathname(); 
+  const pathname = usePathname();
 
   const toggleMenu: MouseEventHandler<HTMLButtonElement> = () =>
     setMenuOpen((prev) => !prev);
@@ -21,7 +21,10 @@ const TopBar: React.FC = (): JSX.Element => {
   return (
     <nav className={styles.container}>
       <div className={styles.left}>
-        <Link href="/" className={styles.mainLogo}>
+        <Link
+          href="/"
+          className={styles.mainLogo}
+        >
           <ShinyText
             text="TSUNAMI ART"
             disabled={false}
@@ -50,7 +53,10 @@ const TopBar: React.FC = (): JSX.Element => {
       >
         <ul>
           <li>
-            <Link href="/" className={clsx(pathname === '/' && styles.active)}>
+            <Link
+              href="/"
+              className={clsx(pathname === '/' && styles.active)}
+            >
               <span>Home</span>
             </Link>
           </li>
