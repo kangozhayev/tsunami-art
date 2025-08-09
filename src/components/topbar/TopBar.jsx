@@ -1,18 +1,17 @@
 'use client';
 
-import React, { useEffect, useState, MouseEventHandler } from 'react';
+import { useEffect, useState } from 'react';
 import styles from './TopBar.module.scss';
 import Link from 'next/link';
 import ShinyText from '@/common/ShinyText/ShinyText';
 import clsx from 'clsx';
 import { usePathname } from 'next/navigation';
 
-const TopBar: React.FC = () => {
-  const [menuOpen, setMenuOpen] = useState<boolean>(false);
+const TopBar = () => {
+  const [menuOpen, setMenuOpen] = useState(false);
   const pathname = usePathname();
 
-  const toggleMenu: MouseEventHandler<HTMLButtonElement> = () =>
-    setMenuOpen((prev) => !prev);
+  const toggleMenu = () => setMenuOpen(prev => !prev);
 
   useEffect(() => {
     setMenuOpen(false);
@@ -21,10 +20,7 @@ const TopBar: React.FC = () => {
   return (
     <nav className={styles.container}>
       <div className={styles.left}>
-        <Link
-          href="/"
-          className={styles.mainLogo}
-        >
+        <Link href="/" className={styles.mainLogo}>
           <ShinyText
             text="TSUNAMI ART"
             disabled={false}
@@ -53,58 +49,37 @@ const TopBar: React.FC = () => {
       >
         <ul>
           <li>
-            <Link
-              href="/"
-              className={clsx(pathname === '/' && styles.active)}
-            >
+            <Link href="/" className={clsx(pathname === '/' && styles.active)}>
               <span>Home</span>
             </Link>
           </li>
           <li>
-            <Link
-              href="/gallery"
-              className={clsx(pathname === '/gallery' && styles.active)}
-            >
+            <Link href="/gallery" className={clsx(pathname === '/gallery' && styles.active)}>
               <span>Gallery</span>
             </Link>
           </li>
           <li>
-            <Link
-              href="/courses"
-              className={clsx(pathname === '/courses' && styles.active)}
-            >
+            <Link href="/courses" className={clsx(pathname === '/courses' && styles.active)}>
               <span>Courses</span>
             </Link>
           </li>
           <li>
-            <Link
-              href="/about"
-              className={clsx(pathname === '/about' && styles.active)}
-            >
+            <Link href="/about" className={clsx(pathname === '/about' && styles.active)}>
               <span>About Me</span>
             </Link>
           </li>
           <li>
-            <Link
-              href="/collaboration"
-              className={clsx(pathname === '/collaboration' && styles.active)}
-            >
+            <Link href="/collaboration" className={clsx(pathname === '/collaboration' && styles.active)}>
               <span>Collab</span>
             </Link>
           </li>
           <li>
-            <Link
-              href="/contact"
-              className={clsx(pathname === '/contact' && styles.active)}
-            >
+            <Link href="/contact" className={clsx(pathname === '/contact' && styles.active)}>
               <span>Contact</span>
             </Link>
           </li>
           <li>
-            <Link
-              href="/login"
-              className={clsx(pathname === '/login' && styles.active)}
-            >
+            <Link href="/login" className={clsx(pathname === '/login' && styles.active)}>
               <span>Login</span>
             </Link>
           </li>
