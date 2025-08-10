@@ -27,6 +27,7 @@ const CoursesPage = () => {
           alt="Courses hero"
           fill
           priority
+          sizes="100vw"
           className={styles.heroImage}
         />
         <div className={styles.heroInner}>

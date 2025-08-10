@@ -7,7 +7,7 @@ const Home = () => {
     <main style={{ textAlign: 'center', color: 'white', marginTop: '25vh' }}>
       <TextType
         text={[
-          'Welcome to Tsunami Art!',
+          'Welcome to Tsunamika Art!',
           'Feel. Create. Inspire.',
           "Let's make art.",
         ]}

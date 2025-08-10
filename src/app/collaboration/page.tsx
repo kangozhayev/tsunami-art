@@ -60,6 +60,7 @@ export default function Brands() {
                 height={60}
                 className={styles.logo}
                 loading="lazy"
+                sizes="(max-width: 640px) 20vw, 120px"
               />
               {b.note && <div className={styles.note}>{b.note}</div>}
             </div>
@@ -97,6 +98,7 @@ export default function Brands() {
                 height={50}
                 className={styles.logo}
                 loading="lazy"
+                sizes="(max-width: 640px) 18vw, 100px"
               />
             </div>
           ))}

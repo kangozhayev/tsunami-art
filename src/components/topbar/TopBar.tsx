@@ -22,7 +22,7 @@ const TopBar = () => {
       <div className={styles.left}>
         <Link href="/" className={styles.mainLogo}>
           <ShinyText
-            text="TSUNAMI ART"
+            text="TSUNAMIKA ART"
             disabled={false}
             speed={3}
             className={styles.shinyText}

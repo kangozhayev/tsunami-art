@@ -56,7 +56,7 @@ const Footer = () => {
           />
         </a>
       </div>
-      <p>@ {currentYear} by Tsunami Art</p>
+      <p>@ {currentYear} by Tsunamika Art</p>
     </footer>
   );
 };

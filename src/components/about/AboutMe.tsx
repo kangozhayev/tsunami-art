@@ -2,6 +2,7 @@
 
 import styles from './AboutMe.module.scss';
 import Image from 'next/image';
+import portrait from '../../../public/77.webp';
 
 const AboutMe = () => {
   return (
@@ -41,8 +42,9 @@ const AboutMe = () => {
       </div>
       <div className={styles.leftContainer}>
         <Image
-          src="/77.WEBP"
+          src={portrait}
           alt="about me image"
+          placeholder="blur"
           width={400}
           height={500}
         />

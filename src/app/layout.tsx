@@ -7,8 +7,8 @@ import { Josefin_Sans } from 'next/font/google';
 import ScrollController from '@/components/ScrollController';
 
 export const metadata = {
-  title: 'Мастерская Цунами',
-  description: 'Мастерская Цунами',
+  title: 'Tsunamika Art',
+  description: 'Tsunamika Art',
   icons: {
     icon: '/favicon.ico',
   },

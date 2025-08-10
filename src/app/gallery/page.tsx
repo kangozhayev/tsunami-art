@@ -42,21 +42,22 @@ const images = [
   '/38.webp',
 ];
 
-const Gallery = () => {
+export default function Gallery() {
   return (
     <div className={styles.container}>
       {images.map((src, i) => (
         <Image
           width={300}
           height={300}
-          key={i}
+          key={src}
           src={src}
           alt={`img-${i}`}
-          style={{ objectFit: 'cover', borderRadius: '8px' }}
+          style={{ objectFit: 'cover', borderRadius: 8 }}
+          loading={i < 8 ? 'eager' : 'lazy'}
+          decoding="async"
+          sizes="300px"
         />
       ))}
     </div>
   );
-};
-
-export default Gallery;
+}
