@@ -2,7 +2,7 @@
 
 import styles from './AboutMe.module.scss';
 import Image from 'next/image';
-import portrait from '../../../public/77.webp';
+import portrait from '../../assets/77.webp';
 
 const AboutMe = () => {
   return (
