@@ -62,7 +62,7 @@ const ContacForm = () => {
         setSuccessMessage(false);
       }, 3000);
     } else {
-      alert('Ошибка при отправке');
+      alert('Failed to send');
     }
   };
 
