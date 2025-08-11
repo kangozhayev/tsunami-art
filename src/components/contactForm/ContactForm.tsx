@@ -5,6 +5,8 @@ import styles from './ContactForm.module.scss';
 import { Button } from '@/common/button/Button';
 import Spinner from '../Spinner';
 
+export const runtime = 'nodejs';
+
 const ContacForm = () => {
   const [isLoading, setIsLoading] = useState(false);
   const [successMessage, setSuccessMessage] = useState(false);
