@@ -2,13 +2,13 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 100vh;
+  min-height: 100vh;
+  min-height: 100dvh;
   flex-direction: column;
   box-sizing: border-box;
   justify-content: center;
   color: white;
   position: relative;
-  
 }
 
 .formWrapper {
@@ -18,7 +18,7 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  margin-bottom: 50px;
+  margin-bottom: 150px;
 }
 
 .button {
@@ -29,7 +29,7 @@
 
   min-width: 140px;
   height: 44px;
-  
+
   letter-spacing: 0.12em;
 
   &:disabled {

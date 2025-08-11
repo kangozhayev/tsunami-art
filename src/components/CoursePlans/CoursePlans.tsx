@@ -11,8 +11,8 @@ const PLANS = [
     id: 'Online' as const,
     title: 'Online Course',
     subtitle: 'Online course with mentor',
-    price: '120 000',
-    currency: 'KZT',
+    price: 'Price on request',
+    currency: '',
     description:
       'Develop your digital painting skills through interactive lessons and creative challenges.',
     features: [
@@ -33,8 +33,8 @@ const PLANS = [
     id: 'Offline' as const,
     title: 'Offline Course',
     subtitle: 'In-person group class',
-    price: '250 000',
-    currency: 'KZT',
+    price: 'Price on request',
+    currency: '',
     description:
       'Work alongside fellow artists in a supportive studio space that fuels creativity.',
     features: [
