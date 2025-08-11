@@ -3,6 +3,8 @@ import { PrismaClient } from '@/generated/prisma';
 import bcrypt from 'bcryptjs';
 import jwt from 'jsonwebtoken';
 
+export const runtime = 'nodejs';
+
 const prisma = new PrismaClient();
 
 const JWT_SECRET = process.env.JWT_SECRET || 'super-secret-key';
