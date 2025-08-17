@@ -5,6 +5,7 @@ import Footer from '@/components/footer/page';
 import Header from '@/components/header/page';
 import { Josefin_Sans } from 'next/font/google';
 import ScrollController from '@/components/ScrollController';
+import { Analytics } from '@vercel/analytics/react';
 
 export const metadata = {
   title: 'Tsunamika Art',
@@ -33,6 +34,7 @@ export default function RootLayout({ children }: { children: ReactNode }) {
           <Header />
           <Footer />
         </div>
+        <Analytics />
       </body>
     </html>
   );
