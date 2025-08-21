@@ -6,6 +6,7 @@ import Header from '@/components/header/page';
 import { Josefin_Sans } from 'next/font/google';
 import ScrollController from '@/components/ScrollController';
 import { Analytics } from '@vercel/analytics/react';
+import { SpeedInsights } from '@vercel/speed-insights/next';
 
 export const metadata = {
   title: 'Tsunamika Art',
@@ -35,6 +36,7 @@ export default function RootLayout({ children }: { children: ReactNode }) {
           <Footer />
         </div>
         <Analytics />
+        <SpeedInsights />
       </body>
     </html>
   );
